@@ -10,7 +10,7 @@ const Header = () => {
     <a className="btn btn-ghost font-serif italic  text-xl">BakulFul </a>
   </div> 
   <div className='px-5 navlink font-'>
-    <Link>Home</Link>
+    <Link to='/' >Home</Link>
     <Link>About</Link>
     <Link>Menu</Link>
   </div>
