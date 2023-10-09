@@ -1,0 +1,56 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic);
+
+
+
+h1, h2, h3,  h4, h5, h6 {
+	font: 700 54px/1.2 'Crimson Text', serif;
+	margin: 0 0 20px;
+	color: #000;
+}
+
+.intro-title,
+.module-title,
+.callout-text,
+.iconbox-title {
+	font: 700 28px/1.2 'Dancing Script', cursive;
+	margin: 0 0 18px;
+}
+
+.module-title,
+.callout-text {
+	font-size: 50px;
+}
+
+.module-subtitle {
+	font: 400 16px/1.2 'Crimson Text',  serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #a7a9ac;
+	margin: 0;
+}
+
+.module {
+	position: relative;
+	background: #fff;
+	padding: 120px 0;
+}
+
+.module-header {
+	text-align: center;
+	margin: 0 0 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
