@@ -13,6 +13,8 @@ const Header = () => {
     <Link to='/' >Home</Link>
     <Link>About</Link>
     <Link>Menu</Link>
+    <Link to='/userLayout/login' >Login</Link>
+    <Link to='/userLayout/register' >Register</Link>
   </div>
  
   <div className="flex-none">

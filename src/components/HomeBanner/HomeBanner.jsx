@@ -1,6 +1,6 @@
 import React from 'react';
 import bgimg1 from '../../assets/banner3.jpg';
-import Header from '../Header/Header';
+
 
 const HomeBanner = () => {
   const backgroundImgUrl = `url(${bgimg1})`;

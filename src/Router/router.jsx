@@ -5,6 +5,9 @@ import Layout from "../components/Layout/Layout";
 import Home1 from "../components/Home1/Home1";
 import ChefItemLayout from "../ChefItemLayout/ChefItemLayout";
 import AllItems from "../AllItems/AllItems";
+import UserLayOut from "../components/UserLayout/UserLayOut";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
   const router = createBrowserRouter([
     {
@@ -25,6 +28,20 @@ import AllItems from "../AllItems/AllItems";
           path:':id',
           element:<AllItems></AllItems>,
           loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+        }
+      ]
+    },
+    {
+      path:'userLayout',
+      element:<UserLayOut></UserLayOut>,
+      children:[
+        {
+          path:'login',
+          element:<Login></Login>
+        },
+        {
+          path:'register',
+          element:<Register></Register>
         }
       ]
     }
