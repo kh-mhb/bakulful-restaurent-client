@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import register from '../../assets/register.jpg'
+import { AuthContext } from '../Providers/AuthProviders';
 
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
+     const handleRegister = (event) => {
+        event.preventDefault();
+  const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name,email,password);
+     
+    createUser(email,password)
+    .then(result => {
+        const createdUser = result.user;
+        console.log(createdUser);
+        Window.alert("User Created Succesfully");
+        form.reset();
+    })
+    .catch(error => {
+        const errorMsg = error;
+        console.log(errorMsg);
+    })
+       
+
+
+
+     }
+
     return (
         <div>
             <div>
             <div className='grid grid-cols-2'>
                 <div className='mt-28 w-4/5 mx-auto'>
-                <form className="card-body">
+                <form  onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text text-2xl font-light">Name</span>
