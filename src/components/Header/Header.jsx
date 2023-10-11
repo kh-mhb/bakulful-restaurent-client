@@ -5,6 +5,7 @@ import { AuthContext } from '../Providers/AuthProviders';
 
 const Header = () => {
   const {user,logOut} = useContext(AuthContext);
+  console.log(user);
   const handleLogOut = () =>{
      logOut()
      .then(result => {
@@ -16,14 +17,14 @@ const Header = () => {
         <div className=''>
              <div className="navbar  text-white bg-slate-900">
   <div className="flex-1">
-    <a className="btn btn-ghost font-serif italic  text-xl">BakulFul </a>
+    <Link to='/' className="btn btn-ghost font-serif italic  text-xl">BakulFul Restaurant </Link>
   </div> 
-  <div className='px-5 navlink font-'>
+  <div className='px-5 navlink font-semibold mr-5  text-lg'>
     <Link to='/' >Home</Link>
     {/* <Link>About</Link> */}
     {/* <Link>Menu</Link> */}
     {
-      user ?  <button onClick={handleLogOut} >LogOut</button> :  <Link to='/userLayout/login' >Login</Link>
+      user ?  <button className='mr-3' onClick={handleLogOut} >LogOut <span className='text-xs font-thin'>{user.email}</span>  </button> :  <Link to='/userLayout/login' >Login</Link>
     }
     <Link to='/userLayout/register' >Register</Link>
   </div>
@@ -33,23 +34,7 @@ const Header = () => {
      
       
     </div>
-    <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
+
   </div>
 </div>
         </div>

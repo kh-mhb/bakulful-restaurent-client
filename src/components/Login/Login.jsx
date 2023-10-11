@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css'
 import login from '../../assets/login.jpg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { AuthContext } from '../Providers/AuthProviders';
 const Login = () => {
    const location = useLocation()
    console.log(location);
+   const [alert,setError] = useState('');
    const from = location.state?.from?.pathname || '/'
   const navigate = useNavigate();
     const {signIn,googleSignIn} = useContext(AuthContext);
@@ -27,8 +28,10 @@ const Login = () => {
 
     })
     .catch(error => {
-        const errorMsg = error;
-        console.log(errorMsg);
+      console.log(error);
+      setError(error.message);
+     window.alert(alert);
+     return;
     })
     
 

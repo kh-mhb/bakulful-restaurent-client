@@ -15,7 +15,7 @@ const ChefCards = ({chef}) => {
          <FaUser></FaUser>
         {name}</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
+    <div className="card-actions justify-start">
       <Link to={`/chefItem/${id}`} > <button className="btn btn-primary m-4">Chef Special </button> </Link>
     </div>
   </div>
