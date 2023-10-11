@@ -11,7 +11,7 @@ const Services = () => {
         <div className='bg-zinc-50'>
             <div className='text-center my-8 p-5' >
                <h3 className='font-bold font-serif text-slate-600 text-6xl '> Catering Services</h3>
-               <p className='font-thin text-lg' >Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+               <p className='font-thin text-lg' >"Catering Excellence: Elevating Your Dining Experience Beyond the Restaurant"</p>
             </div>
             <div className='grid grid-cols-3 px-10 w-4/5 mx-auto gap-5 '>
                 <div className='text-center'>

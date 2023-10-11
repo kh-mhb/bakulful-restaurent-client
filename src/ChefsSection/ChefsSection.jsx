@@ -6,7 +6,7 @@ const ChefsSection = () => {
     const [size, setSize] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/chefs?size=${size}`)
+        fetch(`https://bakulful-restaurant-server-9ir4nzp66-kh-mhb.vercel.app/chefs?size=${size}`)
         .then(res => res.json())
         .then(data => setChefs(data));
     }, [size])

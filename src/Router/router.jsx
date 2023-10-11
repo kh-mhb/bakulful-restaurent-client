@@ -28,7 +28,7 @@ import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
         {
           path:':id',
           element:<PrivateRoute><AllItems></AllItems></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+          loader: ({params}) => fetch(`https://bakulful-restaurant-server-9ir4nzp66-kh-mhb.vercel.app/chefs/${params.id}`)
         }
       ]
     },
