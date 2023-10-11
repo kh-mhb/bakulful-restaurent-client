@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import register from '../../assets/register.jpg'
 import { AuthContext } from '../Providers/AuthProviders';
 
 
 const Register = () => {
+  const navigate = useNavigate();
     const {createUser} = useContext(AuthContext);
      const handleRegister = (event) => {
         event.preventDefault();
@@ -19,7 +20,9 @@ const Register = () => {
     .then(result => {
         const createdUser = result.user;
         console.log(createdUser);
-        Window.alert("User Created Succesfully");
+        window.alert("User Created Succesfully");
+        navigate('/userLayout/login')
+        
         form.reset();
     })
     .catch(error => {
@@ -34,6 +37,7 @@ const Register = () => {
 
     return (
         <div>
+             <h3 className='text-center font-bold text-slate-700  py-3 text-6xl mb-4' >Register</h3>
             <div>
             <div className='grid grid-cols-2'>
                 <div className='mt-28 w-4/5 mx-auto'>

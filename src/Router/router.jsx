@@ -8,6 +8,7 @@ import AllItems from "../AllItems/AllItems";
 import UserLayOut from "../components/UserLayout/UserLayOut";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ import Register from "../components/Register/Register";
       children:[
         {
           path:':id',
-          element:<AllItems></AllItems>,
+          element:<PrivateRoute><AllItems></AllItems></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
         }
       ]

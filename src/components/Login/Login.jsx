@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import './Login.css'
 import login from '../../assets/login.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../Providers/AuthProviders';
 
 const Login = () => {
+   const location = useLocation()
+   console.log(location);
+   const from = location.state?.from?.pathname || '/'
+  const navigate = useNavigate();
     const {signIn,googleSignIn} = useContext(AuthContext);
     const handleLogin = (event) => {
     event.preventDefault();
@@ -19,6 +23,8 @@ const Login = () => {
         console.log(loggedUser);
         window.alert("Login Successfull");
         form.reset();
+        navigate(from,{replace:true});
+
     })
     .catch(error => {
         const errorMsg = error;
@@ -38,7 +44,8 @@ const Login = () => {
         })
      }
     return (
-        <div>
+        <div className='bg-fixed' >
+            <h3 className='text-center font-bold text-slate-700  py-2 text-6xl mb-4' >Login</h3>
             <div className='grid grid-cols-2'>
                 <div className='mt-28 w-4/5 mx-auto'>
                 <form onSubmit={handleLogin} className="card-body">

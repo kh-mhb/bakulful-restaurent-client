@@ -13,15 +13,15 @@ const Header = () => {
      .catch(error => console.log(error));
   }
     return (
-        <div className='  '>
+        <div className=''>
              <div className="navbar  text-white bg-slate-900">
   <div className="flex-1">
     <a className="btn btn-ghost font-serif italic  text-xl">BakulFul </a>
   </div> 
   <div className='px-5 navlink font-'>
     <Link to='/' >Home</Link>
-    <Link>About</Link>
-    <Link>Menu</Link>
+    {/* <Link>About</Link> */}
+    {/* <Link>Menu</Link> */}
     {
       user ?  <button onClick={handleLogOut} >LogOut</button> :  <Link to='/userLayout/login' >Login</Link>
     }
