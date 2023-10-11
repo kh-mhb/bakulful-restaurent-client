@@ -1,10 +1,10 @@
 # Bakulful Restaurant
 
-Welcome to Bakulful Restaurant, where taste meets artistry. Savor exquisite flavors and embrace a culinary journey like no other. Our menu is a celebration of Indian cuisine, expertly crafted by our team of dedicated chefs.
+Welcome to Bakulful Restaurant, where taste meets artistry. Savor exquisite flavors and embrace a culinary journey like no other. Our menu is a celebration of Chinese cuisine, expertly crafted by our team of dedicated chefs.
 
 ## Features
 
-- **Diverse Indian Cuisine**: Explore a collection of different Indian dishes, showcasing the rich and diverse flavors of India.
+- **Diverse chinesen Cuisine**: Explore a collection of different chinesen dishes, showcasing the rich and diverse flavors of chinese.
 
 - **Comprehensive Menu**: Indulge in a delectable array of menus featuring breakfast, dinner, appetizers, salads, side dishes, and snacks. Each dish is expertly crafted to provide an unforgettable dining experience.
 
@@ -32,9 +32,3 @@ We welcome contributions from the community to enhance the Bakulful Restaurant a
 4. Push your branch to your forked repository.
 
 5. Submit a pull request to the main repository, explaining the changes you've made and their purpose.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-Enjoy your culinary journey at Bakulful Restaurant!
